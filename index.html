@@ -41,6 +41,16 @@
 .about{align-items:start}
 .about-photo-wrap{align-self:start}
 .about-copy{min-width:0}
+
+.post-image-photo:before{display:none}
+.post-image-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:18px;
+  background:#1c1b19;
+}
 </style>  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -92,21 +102,30 @@
       </div>
       <div class="post-grid">
         <article class="post post-large">
-          <div class="post-image image-home"><span>HOMESCHOOL LIFE</span></div>
+          <div class="post-image image-home post-image-photo">
+          <img src="/assets/images/post-homeschool-life.webp" alt="Home School Mom emblem" loading="lazy" decoding="async">
+          <span>HOMESCHOOL LIFE</span>
+        </div>
           <div class="post-meta">HOMESCHOOL · REAL LIFE</div>
           <h3>Two kids. Two completely different learners. One homeschool.</h3>
           <p>What it actually looks like homeschooling an elementary kid and a teenager under the same roof.</p>
           <a href="#">Read the story →</a>
         </article>
         <article class="post">
-          <div class="post-image image-work"><span>MONEY + WORK</span></div>
+          <div class="post-image image-work post-image-photo">
+          <img src="/assets/images/post-money-work.webp" alt="Business Brain Freedom Plan laptop emblem" loading="lazy" decoding="async">
+          <span>MONEY + WORK</span>
+        </div>
           <div class="post-meta">THE NAPTIME MICRO-BUSINESS</div>
           <h3>Build income in the cracks.</h3>
           <p>Small, flexible ways to make money when your day doesn't come with eight uninterrupted hours.</p>
           <a href="#">Explore the series →</a>
         </article>
         <article class="post">
-          <div class="post-image image-analog"><span>ANALOG CHILDHOOD</span></div>
+          <div class="post-image image-analog post-image-photo">
+          <img src="/assets/images/post-goals-growth.webp" alt="Plans Goals Growth notebook emblem" loading="lazy" decoding="async">
+          <span>ANALOG CHILDHOOD</span>
+        </div>
           <div class="post-meta">KIDS + PARENTING</div>
           <h3>Let them be bored.</h3>
           <p>Simple ways to make room for independent play, curiosity, and a childhood that isn't scheduled to death.</p>
