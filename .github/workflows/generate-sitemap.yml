@@ -1,0 +1,50 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    name: Generate sitemap and commit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate sitemap.xml
+        run: |
+          echo "Generating sitemap..."
+          SITE_URL="https://homeschoolfts.com"
+          OUT=sitemap.xml
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > $OUT
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUT
+          git ls-files '*.html' | while IFS= read -r file; do
+            if [ "$file" = "sitemap.xml" ]; then
+              continue
+            fi
+            lastmod=$(git log -1 --format=%cs -- "$file" 2>/dev/null || true)
+            loc="$SITE_URL/${file#./}"
+            if [ "$file" = "index.html" ]; then
+              loc="$SITE_URL/"
+            fi
+            printf "  <url>\n    <loc>%s</loc>\n" "$loc" >> $OUT
+            if [ -n "$lastmod" ]; then
+              printf "    <lastmod>%s</lastmod>\n" "$lastmod" >> $OUT
+            fi
+            printf "    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n" >> $OUT
+          done
+          echo "</urlset>" >> $OUT
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          if git commit -m "chore: auto-generate sitemap.xml" >/dev/null 2>&1; then
+            git push
+            echo "sitemap pushed"
+          else
+            echo "No changes to commit"
+          fi
