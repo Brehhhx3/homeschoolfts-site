@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Homeschool FTS">
+  <rect width="64" height="64" rx="15" fill="#152b26"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#fbf7f1">FTS</text>
+  <path d="M17 47h30" stroke="#c98f80" stroke-width="2" stroke-linecap="round"/>
+</svg>
