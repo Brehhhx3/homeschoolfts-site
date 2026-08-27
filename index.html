@@ -3,190 +3,230 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Homeschool FTS — flexible, thoughtful learning for your family.">
+  <meta name="description" content="Homeschool FTS is a real-life lifestyle blog for savvy, spirited seekers navigating homeschooling, motherhood, money, work, and intentional living.">
   <link rel="canonical" href="https://homeschoolfts.com/">
-  <meta name="theme-color" content="#F6FBF9">
-
-  <!-- Open Graph / Twitter -->
+  <meta name="theme-color" content="#8F2638">
   <meta property="og:site_name" content="Homeschool FTS">
-  <meta property="og:title" content="Homeschool FTS | Learn Together">
-  <meta property="og:description" content="Flexible, thoughtful learning for your family.">
+  <meta property="og:title" content="Homeschool FTS | For the Savvy. The Spirited. The Seekers.">
+  <meta property="og:description" content="Real homeschooling, smart living, making money in the cracks, and building a good life while raising kids.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://homeschoolfts.com/">
-  <meta property="og:image" content="https://homeschoolfts.com/assets/images/hero-family.webp">
-
+  <meta property="og:image" content="https://homeschoolfts.com/assets/images/meet-bria.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Homeschool FTS | Learn Together">
-  <meta name="twitter:description" content="Flexible, thoughtful learning for your family.">
-  <meta name="twitter:image" content="https://homeschoolfts.com/assets/images/hero-family.webp">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-coffee-32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <title>Homeschool FTS | Learn Together</title>
-
+  <meta name="twitter:title" content="Homeschool FTS | For the Savvy. The Spirited. The Seekers.">
+  <meta name="twitter:description" content="Real homeschooling, smart living, making money in the cracks, and building a good life while raising kids.">
+  <meta name="twitter:image" content="https://homeschoolfts.com/assets/images/meet-bria.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
-</head>
+  <title>Homeschool FTS | For the Savvy. The Spirited. The Seekers.</title>
+<style>
+.about-photo-wrap{position:relative;background:var(--paper);padding:18px;box-shadow:18px 18px 0 rgba(143,38,56,.08);transform:rotate(-1.5deg);transition:transform .5s ease,box-shadow .5s ease}
+.about-photo-wrap:before{content:"";position:absolute;inset:10px;border:1px solid rgba(143,38,56,.25);pointer-events:none;z-index:1}
+.about-photo-wrap:hover{transform:rotate(0) translateY(-6px);box-shadow:24px 24px 0 rgba(143,38,56,.1)}
+.about-photo{display:block;width:100%;aspect-ratio:1.25/1;object-fit:cover;object-position:center top}
+.about-copy h2{margin:4px 0 22px;font:400 clamp(2.7rem,5vw,5rem)/.95 var(--serif);letter-spacing:-.045em}
+.about-copy h2 em{color:var(--burgundy);font-style:italic}
+.script-kicker{margin:-10px 0 0;color:#b86f73;font:italic 2rem/1.1 cursive}
+.about-values{margin:30px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-values .kicker{margin-bottom:18px}
+.about-values>div{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:9px 0}
+.about-values>div strong{color:var(--burgundy);font:400 1.45rem/1 var(--serif);font-style:italic}
+.about-values>div span{color:var(--muted);font-size:.95rem}
+.about-welcome{margin-top:28px;font-size:1.15rem!important;color:var(--ink)!important}
+@media(max-width:650px){.about-photo{aspect-ratio:1/1}.about-values>div{grid-template-columns:1fr;gap:2px}}
+@media(prefers-reduced-motion:reduce){.about-photo-wrap{transition:none!important}}
+</style></head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
-  <header class="site-header" role="banner">
-    <nav class="container site-nav" role="navigation" aria-label="Main navigation">
-      <div class="brand">HOMESCHOOL FTS</div>
-      <ul class="nav-list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="top-note">REAL LIFE. REAL HOMESCHOOL. REAL LIFE BEYOND HOMESCHOOL.</div>
+    <nav class="container site-nav" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <a class="brand" href="/" aria-label="Homeschool FTS home"><span>HOMESCHOOL</span> FTS</a>
+      <div id="main-menu" class="nav-list">
+        <a href="#homeschool">Homeschool</a>
+        <a href="#money">Money + Work</a>
+        <a href="#smart">Smart Living</a>
+        <a href="#mom">Mom Life</a>\n        <a href="#about">Meet Bria</a>
+        <a class="nav-den" href="#beaver-den">The Beaver Den</a>
+      </div>
     </nav>
   </header>
 
-  <main id="content" role="main">
+  <main id="content">
     <section class="hero container">
-      <div class="hero-inner">
-        <h1>Learning that grows with your family.</h1>
-        <p class="lead">Homeschool FTS supports meaningful, flexible, and family-centered learning—one curious day at a time.</p>
-        <a class="button" href="#about">Learn more</a>
-        <figure class="hero-photo-inline">
-          <img src="/assets/images/hero-family.webp" width="1334" height="980" alt="A family learning together at home" fetchpriority="high" decoding="async">
-        </figure>
+      <div class="hero-copy">
+        <p class="kicker">HOMESCHOOL FTS</p>
+        <h1>For the <span>savvy.</span><br>the spirited.<br>the seekers.</h1>
+        <p class="hero-text">Real homeschooling, smart living, making money in the cracks, and figuring out how to build a good life while raising kids.</p>
+        <a class="button" href="#latest">Read the latest</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-note">LEARNING<br>IN REAL LIFE</div>
+        <div class="art-circle"></div>
+        <div class="art-paper"><span>FTS</span><small>freedom • curiosity • real life</small></div>
       </div>
     </section>
 
-    <section class="container intro">
-      <div class="copy">
-        <h2>A thoughtful homeschool journey</h2>
-        <p>Every child learns differently. We believe education can be practical, engaging, and shaped around your family's goals, interests, and rhythm.</p>
+    <section class="identity-strip">
+      <div class="container identity-grid">
+        <div><strong>SAVVY</strong><span>Spend smarter. Work smarter. Live intentionally.</span></div>
+        <div><strong>SPIRITED</strong><span>Raise independent kids without losing yourself.</span></div>
+        <div><strong>SEEKERS</strong><span>Stay curious. Keep learning. Question everything.</span></div>
       </div>
+    </section>
 
-      <div class="grid">
-        <article class="card card-1">
-          <figure class="card-visual card-visual-photo">
-            <img src="/assets/images/pencils.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Colorful pencils arranged on white paper">
-          </figure>
-          <h3>Curiosity first</h3>
-          <p>Make room for questions, creativity, reading, play, and the excitement of discovering something new.</p>
+    <section id="latest" class="section container">
+      <div class="section-head">
+        <div><p class="kicker">FROM THE BLOG</p><h2>What's happening around here.</h2></div>
+        <a href="#" class="view-all">View all posts →</a>
+      </div>
+      <div class="post-grid">
+        <article class="post post-large">
+          <div class="post-image image-home"><span>HOMESCHOOL LIFE</span></div>
+          <div class="post-meta">HOMESCHOOL · REAL LIFE</div>
+          <h3>Two kids. Two completely different learners. One homeschool.</h3>
+          <p>What it actually looks like homeschooling an elementary kid and a teenager under the same roof.</p>
+          <a href="#">Read the story →</a>
         </article>
-        <article class="card card-2">
-          <figure class="card-visual card-visual-pin">
-            <img src="/assets/images/pin-business-brain.webp" width="264" height="250" loading="lazy" decoding="async" alt="Laptop pin reading Business Brain Freedom Plan">
-          </figure>
-          <h3>Flexible learning</h3>
-          <p>Create a learning plan that fits your household instead of forcing your household to fit a rigid plan.</p>
+        <article class="post">
+          <div class="post-image image-work"><span>MONEY + WORK</span></div>
+          <div class="post-meta">THE NAPTIME MICRO-BUSINESS</div>
+          <h3>Build income in the cracks.</h3>
+          <p>Small, flexible ways to make money when your day doesn't come with eight uninterrupted hours.</p>
+          <a href="#">Explore the series →</a>
         </article>
-        <article class="card card-3">
-          <figure class="card-visual card-visual-pin">
-            <img src="/assets/images/pin-homeschool-mom.webp" width="208" height="242" loading="lazy" decoding="async" alt="House-shaped Home School Mom pin">
-          </figure>
-          <h3>Real-life skills</h3>
-          <p>Connect learning to everyday life through projects, conversation, practical skills, and community.</p>
+        <article class="post">
+          <div class="post-image image-analog"><span>ANALOG CHILDHOOD</span></div>
+          <div class="post-meta">KIDS + PARENTING</div>
+          <h3>Let them be bored.</h3>
+          <p>Simple ways to make room for independent play, curiosity, and a childhood that isn't scheduled to death.</p>
+          <a href="#">Read more →</a>
         </article>
       </div>
+    </section>
 
-      <section class="photo-section" aria-labelledby="learning-title">
-        <div class="copy">
-          <h2 id="learning-title">Learning in real life</h2>
-          <p>Some of the best learning happens in ordinary moments—reading together, exploring something hands-on, and following curiosity wherever it leads.</p>
+    <section id="money" class="feature feature-red">
+      <div class="container feature-grid">
+        <div>
+          <p class="kicker light">THE NAPTIME MICRO-BUSINESS</p>
+          <h2>Build income<br><em>in the cracks.</em></h2>
         </div>
-        <div class="photo-grid">
-          <figure class="photo-card">
-            <img src="/assets/images/learning-library.webp" width="932" height="760" loading="lazy" decoding="async" alt="An adult reading with a child in a library">
-          </figure>
-          <figure class="photo-card">
-            <img src="/assets/images/learning-table.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A parent and child working together at a homeschool table">
-          </figure>
-          <figure class="photo-card">
-            <img src="/assets/images/learning-reading.webp" width="1000" height="563" loading="lazy" decoding="async" alt="An adult reading a colorful book with a young child">
-          </figure>
+        <div class="feature-copy">
+          <p>You don't need a perfect schedule or a giant audience. You need ideas that can survive interruptions.</p>
+          <ul>
+            <li>Low-stress freelancing</li>
+            <li>Digital products</li>
+            <li>Affiliate + micro-content</li>
+            <li>Work-from-home strategies</li>
+          </ul>
+          <a class="button button-light" href="#">Explore money + work</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="card about" id="about">
-        <h2>About Homeschool FTS</h2>
-        <p>Homeschool FTS is a welcoming space for families building an education that works for them. This site is the beginning—check back for resources, ideas, and updates.</p>
-      </section>
+    <section id="smart" class="section container">
+      <div class="section-head">
+        <div><p class="kicker">SMART LIVING</p><h2>Buy less. Choose better.</h2></div>
+        <p class="section-intro">Savvy isn't about being cheap. It's knowing what deserves your money, time, energy, and attention.</p>
+      </div>
+      <div class="smart-grid">
+        <div class="smart-feature"><span class="label">FTS WORTH IT?</span><h3>BUY IT · BORROW IT · THRIFT IT · SKIP IT</h3><p>Honest reviews, de-influencing, secondhand finds, and products that actually earn their spot in our home.</p><a href="#">See savvy finds →</a></div>
+        <div class="smart-list"><div><strong>De-influencing</strong><span>What you probably don't need.</span></div><div><strong>Secondhand</strong><span>Good stuff doesn't have to be new.</span></div><div><strong>Stack the savings</strong><span>Discounts, memberships, deals, and smarter spending.</span></div></div>
+      </div>
+    </section>
 
-      <section class="card meet-bria" aria-labelledby="meet-bria-title">
-        <figure class="bria-photo">
-          <img src="/assets/images/bria.webp" width="1200" height="960" loading="lazy" decoding="async" alt="Bria, the mom behind Homeschool FTS">
-        </figure>
-        <div class="bria-copy">
-          <p class="fts-label">Freedom • Tools • Success</p>
-          <h2 id="meet-bria-title">Meet Bria</h2>
-          <p>Hi, I’m Bria, the mom behind <strong>Homeschool FTS</strong>.</p>
-          <p>I homeschool two kids at very different stages of learning, which has taught me quickly that there is no single “right” way to homeschool. What works for one child, one subject, or even one season of life may not work for the next.</p>
-          <p>I created Homeschool FTS to share the real side of our journey: the planning, the lessons, the resources, the wins, the things that flop, and everything we learn along the way. I want this to be a practical place where families can find ideas they can actually use without feeling like their homeschool has to look perfect.</p>
-          <p><strong>Freedom.</strong> The freedom to create an education that fits your family. <strong>Tools.</strong> The resources to make that education possible. <strong>Success.</strong> The confidence to define success in a way that makes sense for your child.</p>
-          <p>I’m learning right alongside my kids, building Homeschool FTS as we go, and sharing what genuinely works in our home. If something we discover makes another family’s homeschool journey a little easier, then this space is doing exactly what I hoped it would do.</p>
+    <section id="homeschool" class="section section-tint container">
+      <div class="section-head"><div><p class="kicker">HOMESCHOOL LIFE</p><h2>The real stuff.</h2></div><a href="#" class="view-all">Explore homeschool →</a></div>
+      <div class="topic-grid">
+        <a href="#"><span>CURRICULUM</span><strong>What we're actually using</strong><small>Reviews, comparisons + honest notes</small></a>
+        <a href="#"><span>ELEMENTARY</span><strong>Learning through real life</strong><small>Ideas for curious younger learners</small></a>
+        <a href="#"><span>HIGH SCHOOL</span><strong>Raising an independent learner</strong><small>Planning, credits, college + beyond</small></a>
+      </div>
+    </section>
+
+    <section id="mom" class="section container mom-section">
+      <div class="mom-art" aria-hidden="true"><div>ME, TOO.</div></div>
+      <div class="mom-copy">
+        <p class="kicker">MOM, BUT STILL ME</p>
+        <h2>You are allowed to exist outside the homeschool schedule.</h2>
+        <p>Quick workouts. Better energy. Comfortable clothes that still make you feel like yourself. Tiny resets that fit into an actual day.</p>
+        <a href="#">Read Mom Life →</a>
+      </div>
+    </section>
+
+    <section id="beaver-den" class="den-banner">
+      <div class="container den-grid">
+        <div><p class="kicker">THE SISTER SITE</p><h2>Need the actual homeschool resources?</h2><p>The Beaver Den Homeschool is where the curriculum, printables, planning tools, and educational resources live.</p></div>
+        <a class="button" href="https://thebeaverdenschool.com/">Visit The Beaver Den</a>
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="/assets/images/meet-bria.jpg" alt="Bria smiling at her desk in a warm home office setting">
+      </div>
+      <div class="about-copy">
+        <p class="kicker">MEET BRIA</p>
+        <p class="script-kicker">hello</p>
+        <h2>Hi, I’m Bria, the mom behind <em>Homeschool FTS.</em></h2>
+        <p>I homeschool two kids at very different stages of learning, which has taught me quickly that there is no single “right” way to homeschool. What works for one child, one subject, or even one season of life may not work for the next. For me, homeschooling is about having the flexibility to pay attention, adjust, and build an education around the child instead of forcing the child to fit into a rigid system.</p>
+        <p>I created <strong>Homeschool FTS</strong> to share the real side of our journey: the planning, the lessons, the resources, the wins, the things that flop, and everything we learn along the way. I want this to be a practical place where families can find ideas they can actually use without feeling like their homeschool has to look perfect.</p>
+        <div class="about-values">
+          <p class="kicker">AT THE HEART OF EVERYTHING HERE</p>
+          <div><strong>Freedom.</strong><span>The freedom to create an education that fits your family.</span></div>
+          <div><strong>Tools.</strong><span>The tools to make that education possible.</span></div>
+          <div><strong>Success.</strong><span>The confidence to define success in a way that makes sense for your child.</span></div>
         </div>
-      </section>
+        <p>I’m learning right alongside my kids, building Homeschool FTS as we go, and sharing what genuinely works in our home. If something we discover makes another family’s homeschool journey a little easier, then this space is doing exactly what I hoped it would do.</p>
+        <p class="about-welcome"><strong>Welcome to Homeschool FTS. I’m glad you’re here.</strong></p>
+      </div>
+    </section>
 
-      <section id="contact" class="contact">
-        <h2>Let's connect</h2>
-        <p>Questions or interested in learning more? Email us at <a href="mailto:BriaS@HomeSchoolFTS.com">BriaS@HomeSchoolFTS.com</a>.</p>
-      </section>
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div><p class="kicker light">THE FTS NOTEBOOK</p><h2>Good ideas. No inbox nonsense.</h2><p>New posts, useful finds, homeschool ideas, and the occasional "you need to see this" moment.</p></div>
+        <form action="#" method="post"><label class="sr-only" for="email">Email address</label><input id="email" type="email" name="email" placeholder="Your email address" autocomplete="email" required><button class="button button-light" type="submit">I'm in</button></form>
+      </div>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    © 2026 Homeschool FTS. All rights reserved.
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="footer-brand" href="/">HOMESCHOOL <span>FTS</span></a><p>For the savvy. The spirited. The seekers.</p></div>
+      <div><strong>EXPLORE</strong><a href="#homeschool">Homeschool</a><a href="#money">Money + Work</a><a href="#smart">Smart Living</a><a href="#mom">Mom Life</a></div>
+      <div><strong>THE BEAVER DEN</strong><a href="#beaver-den">Curriculum + Resources</a><a href="#">Printables</a><a href="#">Planning</a></div>
+      <div><strong>LET'S CONNECT</strong><a href="mailto:BriaS@HomeSchoolFTS.com">Email Bria</a><a href="#">Instagram</a><a href="#">Pinterest</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Homeschool FTS</span><span>Built for real life.</span></div>
   </footer>
 
-  <!-- Schema.org JSON-LD for organization -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Homeschool FTS",
-    "url": "https://homeschoolfts.com",
-    "email": "mailto:BriaS@HomeSchoolFTS.com"
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Homeschool FTS",
+    "url":"https://homeschoolfts.com",
+    "description":"A lifestyle blog about homeschooling, motherhood, smart living, flexible income, and intentional family life.",
+    "publisher":{"@type":"Person","name":"Bria"}
   }
   </script>
 
-  <!-- Cookie / analytics consent: analytics are only loaded after user consents -->
-  <div id="cookie-consent" class="cookie-consent" aria-live="polite">
-    <div class="cookie-inner container">
-      <p>We use a minimal analytics script to understand how the site is used. By clicking "Accept" you agree to loading this analytics script. No personal data is stored.</p>
-      <div class="cookie-actions">
-        <button id="cookie-reject" class="button button-secondary">Reject</button>
-        <button id="cookie-accept" class="button">Accept</button>
-      </div>
-    </div>
-  </div>
-
   <script>
-    (function(){
-      var ANALYTICS_ID = 'G-QDRMD73C3P';
-      function setConsent(value){ localStorage.setItem('homeschoolfts_analytics', value); }
-      function getConsent(){ return localStorage.getItem('homeschoolfts_analytics'); }
-      function loadAnalytics(){
-        if(window.gtagLoaded) return;
-        var s = document.createElement('script');
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ANALYTICS_ID;
-        s.async = true;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} 
-        window.gtag = gtag; 
-        gtag('js', new Date());
-        gtag('config', ANALYTICS_ID, { 'anonymize_ip': true });
-        window.gtagLoaded = true;
-      }
-
-      var consent = getConsent();
-      var banner = document.getElementById('cookie-consent');
-      if(consent === 'granted'){
-        loadAnalytics();
-        banner.style.display = 'none';
-      } else if(consent === 'denied'){
-        banner.style.display = 'none';
-      } else {
-        banner.style.display = 'block';
-      }
-
-      document.getElementById('cookie-accept').addEventListener('click', function(){ setConsent('granted'); loadAnalytics(); banner.style.display = 'none'; });
-      document.getElementById('cookie-reject').addEventListener('click', function(){ setConsent('denied'); banner.style.display = 'none'; });
+    (() => {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('main-menu');
+      toggle?.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open', !open);
+      });
+      menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        toggle?.setAttribute('aria-expanded', 'false');
+        menu?.classList.remove('open');
+      }));
     })();
   </script>
 </body>
