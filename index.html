@@ -156,9 +156,42 @@
       <h2>Coming soon.</h2>
     </section>
 
-    <section id="smart" class="section container">
-      <p class="eyebrow">SMART LIVING</p>
-      <h2>Coming soon.</h2>
+    <section id="smart" class="section container planner-section" aria-labelledby="smart-title">
+      <div class="section-heading">
+        <p class="eyebrow">SMART LIVING</p>
+        <h2 id="smart-title">A little planning. More room for life.</h2>
+        <p>Make space for lessons, family priorities, and the small wins with a printable planner that fits your week.</p>
+      </div>
+      <article class="card planner-product" aria-labelledby="planner-title">
+        <figure class="planner-preview">
+          <img id="planner-cover" src="/assets/images/planners/weekly-original.png" width="773" height="1000" loading="lazy" decoding="async" alt="Original Weekly Planner cover">
+          <figcaption>Cover preview · Printable PDF</figcaption>
+        </figure>
+        <div class="planner-details">
+          <p class="eyebrow">HOMESCHOOL FTS PRINTABLES</p>
+          <h3 id="planner-title">Weekly Homeschool Planner</h3>
+          <p>Ten undated pages you can print again for each new week.</p>
+          <ul class="planner-includes">
+            <li>Week at a glance, goals, to-dos, and prep</li>
+            <li>Monday through Friday planning pages</li>
+            <li>Reading log and weekly reflection</li>
+          </ul>
+          <label for="planner-version">Choose your planner version</label>
+          <select id="planner-version" aria-describedby="planner-description" disabled>
+              <option value="weekly-original">Original Weekly Planner</option>
+              <option value="two-child-homeschool-mom">Two Child Edition, Homeschool Mom cover</option>
+              <option value="two-child-plans-goals-growth">Two Child Edition, Plans • Goals • Growth cover</option>
+          </select>
+          <div aria-live="polite" aria-atomic="true">
+            <p id="planner-description">A flexible weekly layout for your household, with daily lesson planning, chores, reading, and reflection.</p>
+            <p id="planner-price" class="planner-price">$2.00 USD</p>
+          </div>
+          <a id="planner-buy" class="button" aria-disabled="true" role="link">Checkout coming soon</a>
+          <p id="planner-status" class="planner-note">Online purchasing is not available yet.</p>
+          <p class="planner-note">Digital PDF only. No physical item is shipped. For personal homeschool household use.</p>
+          <noscript><p>Enable JavaScript to compare all three planner versions. For planner questions, <a href="mailto:BriaS@HomeSchoolFTS.com">email Bria</a>.</p></noscript>
+        </div>
+      </article>
     </section>
 
     <section id="mom" class="section container">
@@ -181,6 +214,8 @@
       <small>© 2026 Homeschool FTS. All rights reserved.</small>
     </div>
   </footer>
+
+  <script src="/assets/js/planners.js" defer></script>
 
   <script type="application/ld+json">
   {
