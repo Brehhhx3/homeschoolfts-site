@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop printable homeschool planners from HomeSchoolFTS.">
+  <link rel="canonical" href="https://homeschoolfts.com/shop.html">
+  <meta name="theme-color" content="#152b26">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Planner Shop | HomeSchoolFTS</title>
+  <style>
+    .shop-hero{padding:72px 0 40px;text-align:center}.shop-hero p:last-child{max-width:720px;margin:0 auto;color:var(--muted);font-size:1.08rem}
+    .shop-wrap{padding:28px 0 110px}.product-card{max-width:980px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:var(--shadow)}
+    .planner-preview{min-height:520px;border-radius:18px;background:linear-gradient(145deg,#f8ebe8,#fffdfb);border:1px solid #e4d5cd;padding:34px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 12px 30px rgba(32,32,32,.08)}
+    .planner-preview .mini-brand{font-size:.76rem;font-weight:900;letter-spacing:.16em;color:var(--burgundy);text-transform:uppercase}.planner-preview h2{font-size:clamp(2.3rem,5vw,4.5rem);margin:18px 0 10px}.preview-edition{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;color:var(--burgundy-dark)}.preview-bottom{font-size:.9rem;color:var(--muted)}
+    .product-copy h1{font-size:clamp(2.2rem,4.8vw,4rem);margin-bottom:14px}.price{font:700 2rem/1 Georgia,"Times New Roman",serif;color:var(--burgundy);margin:14px 0 24px}.product-copy ul{padding-left:20px;color:var(--muted)}
+    .field{display:grid;gap:8px;margin:24px 0 18px}.field label{font-weight:800}.field select{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:inherit}.buy-button{width:100%;min-height:52px;font-size:1rem}.fine-print{margin-top:14px;color:var(--muted);font-size:.84rem}.back-link{display:inline-block;margin-top:24px;font-weight:800}
+    @media (max-width:800px){.product-card{grid-template-columns:1fr;padding:22px}.planner-preview{min-height:390px}.shop-hero{padding-top:48px}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <nav class="container site-nav" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="HomeSchoolFTS home">
+        <span class="brand-name">Homeschool <b>FTS</b></span>
+        <span class="brand-tagline">Freedom. Tools. Success.</span>
+      </a>
+      <div class="nav-list">
+        <a href="/#homeschool">Homeschool</a>
+        <a href="/#money">Money + Work</a>
+        <a href="/#smart">Smart Living</a>
+        <a href="/shop.html" aria-current="page">Shop</a>
+        <a href="/about.html">Meet Bria</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="shop-hero container">
+      <p class="eyebrow">HOMESCHOOL FTS PRINTABLES</p>
+      <h1>Plan the week without making it another full-time job.</h1>
+      <p>Choose the planner version that fits your household. Each option is a 10-page undated printable PDF designed for real homeschool weeks.</p>
+    </section>
+
+    <section class="shop-wrap container" aria-labelledby="planner-title">
+      <article class="product-card">
+        <div class="planner-preview" aria-live="polite">
+          <div>
+            <div class="mini-brand">HomeSchoolFTS</div>
+            <h2>Weekly Homeschool Planner</h2>
+            <div id="preview-edition" class="preview-edition">Original Weekly Planner</div>
+          </div>
+          <div class="preview-bottom">Undated • Printable PDF • Personal household use</div>
+        </div>
+
+        <div class="product-copy">
+          <p class="eyebrow">DIGITAL DOWNLOAD</p>
+          <h1 id="planner-title">Weekly Homeschool Planner</h1>
+          <p id="planner-description">A clean 10-page weekly planner with a week-at-a-glance, goals and prep, Monday through Friday planning pages, a reading log, and weekly reflection.</p>
+          <div class="price">$2.00</div>
+          <ul>
+            <li>10-page undated printable planner</li>
+            <li>Weekly overview, goals, daily plans, reading log, and reflection</li>
+            <li>Two-child editions include side-by-side planning for both learners</li>
+            <li>Instant Stripe checkout</li>
+          </ul>
+
+          <div class="field">
+            <label for="planner-version">Choose your planner version</label>
+            <select id="planner-version">
+              <option value="original">Original Weekly Planner</option>
+              <option value="mom">Two Child Edition — Homeschool Mom</option>
+              <option value="growth">Two Child Edition — Plans • Goals • Growth</option>
+            </select>
+          </div>
+
+          <a id="buy-now" class="button buy-button" href="https://buy.stripe.com/fZubJ1gKgeyt5mP1w6aIM02">Buy now with Stripe</a>
+          <p class="fine-print">Digital product. No physical item will be shipped. For personal household use only.</p>
+          <a class="back-link" href="/">← Back to HomeSchoolFTS</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>HOMESCHOOL FTS</strong><span>Freedom. Tools. Success.</span></div>
+      <small>© 2026 Homeschool FTS. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const select = document.getElementById('planner-version');
+      const buy = document.getElementById('buy-now');
+      const edition = document.getElementById('preview-edition');
+      const description = document.getElementById('planner-description');
+      const versions = {
+        original: {
+          label: 'Original Weekly Planner',
+          url: 'https://buy.stripe.com/fZubJ1gKgeyt5mP1w6aIM02',
+          description: 'A clean 10-page weekly planner with a week-at-a-glance, goals and prep, Monday through Friday planning pages, a reading log, and weekly reflection.'
+        },
+        mom: {
+          label: 'Two Child Edition — Homeschool Mom',
+          url: 'https://buy.stripe.com/7sY00jfGc2PL5mPeiSaIM03',
+          description: 'A 10-page two-child planner with side-by-side weekly plans, individual goals, daily lessons for both learners, reading logs, and family reflection.'
+        },
+        growth: {
+          label: 'Two Child Edition — Plans • Goals • Growth',
+          url: 'https://buy.stripe.com/5kQbJ11PmaiddTla2CaIM04',
+          description: 'The two-child weekly planner with the Plans • Goals • Growth cover, built for side-by-side planning, family prep, daily lessons, reading, and reflection.'
+        }
+      };
+      function updatePlanner(){
+        const v = versions[select.value];
+        buy.href = v.url;
+        edition.textContent = v.label;
+        description.textContent = v.description;
+      }
+      select.addEventListener('change', updatePlanner);
+      updatePlanner();
+    })();
+  </script>
+</body>
+</html>
