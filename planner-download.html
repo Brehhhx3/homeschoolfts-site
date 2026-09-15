@@ -22,42 +22,33 @@
     <section class="download-card" aria-labelledby="download-title">
       <p class="eyebrow">PURCHASE COMPLETE</p>
       <h1 id="download-title">Your planner is ready.</h1>
-      <p id="edition-name">HomeSchoolFTS Weekly Homeschool Planner</p>
+      <p>Your payment will be verified securely before the PDF is delivered.</p>
       <div id="download-area" class="download-actions"></div>
-      <p id="download-note" class="notice">Keep this page open until your download starts.</p>
+      <p id="download-note" class="notice">Use the secure download button below. Your planner file is no longer served directly from the public website.</p>
       <div class="download-actions"><a class="text-link" href="/shop.html">Back to the shop</a></div>
     </section>
   </main>
   <footer class="footer"><div class="container footer-inner"><div><strong>HOMESCHOOL FTS</strong><span>Freedom. Tools. Success.</span></div><small>© 2026 Homeschool FTS.</small></div></footer>
   <script>
     (() => {
-      const edition = new URLSearchParams(location.search).get('edition');
-      const name = document.getElementById('edition-name');
+      const sessionId = new URLSearchParams(location.search).get('session_id');
       const area = document.getElementById('download-area');
       const note = document.getElementById('download-note');
-      const downloads = {
-        'weekly-original': {
-          name: 'Original Weekly Homeschool Planner',
-          file: '/assets/downloads/original-weekly-planner.pdf'
-        },
-        'two-child-homeschool-mom': {
-          name: 'Two Child Planner — Homeschool Mom',
-          file: '/assets/downloads/HomeSchoolFTS_2_Child_Planner_Homeschool_Mom_Cover.pdf'
-        },
-        'two-child-plans-goals-growth': {
-          name: 'Two Child Planner — Plans • Goals • Growth',
-          file: '/assets/downloads/HomeSchoolFTS_2_Child_Planner_Plans_Goals_Growth_Cover.pdf'
-        }
-      };
-      if (downloads[edition]) {
-        const item = downloads[edition];
-        name.textContent = item.name;
-        area.innerHTML = `<a class="button" href="${item.file}" download>Download your PDF</a>`;
-        note.textContent = 'Digital download for personal household use only.';
-      } else {
+      const workerBase = 'https://homeschoolfts-downloads.brialee2424.workers.dev/';
+
+      if (!sessionId || !sessionId.startsWith('cs_')) {
         area.innerHTML = '<a class="button" href="/shop.html">Return to the planner shop</a>';
-        note.textContent = 'We could not determine which planner edition was purchased.';
+        note.textContent = 'We could not find a valid Stripe checkout session for this download.';
+        return;
       }
+
+      const secureUrl = `${workerBase}?session_id=${encodeURIComponent(sessionId)}`;
+      const link = document.createElement('a');
+      link.className = 'button';
+      link.href = secureUrl;
+      link.textContent = 'Download your planner securely';
+      link.rel = 'nofollow';
+      area.appendChild(link);
     })();
   </script>
 </body>
