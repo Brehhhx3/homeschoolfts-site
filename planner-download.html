@@ -39,6 +39,14 @@
         'weekly-original': {
           name: 'Original Weekly Homeschool Planner',
           file: '/assets/downloads/original-weekly-planner.pdf'
+        },
+        'two-child-homeschool-mom': {
+          name: 'Two Child Planner — Homeschool Mom',
+          file: '/assets/downloads/HomeSchoolFTS_2_Child_Planner_Homeschool_Mom_Cover.pdf'
+        },
+        'two-child-plans-goals-growth': {
+          name: 'Two Child Planner — Plans • Goals • Growth',
+          file: '/assets/downloads/HomeSchoolFTS_2_Child_Planner_Plans_Goals_Growth_Cover.pdf'
         }
       };
       if (downloads[edition]) {
@@ -46,10 +54,6 @@
         name.textContent = item.name;
         area.innerHTML = `<a class="button" href="${item.file}" download>Download your PDF</a>`;
         note.textContent = 'Digital download for personal household use only.';
-      } else if (edition === 'two-child-homeschool-mom' || edition === 'two-child-plans-goals-growth') {
-        name.textContent = edition === 'two-child-homeschool-mom' ? 'Two Child Planner — Homeschool Mom' : 'Two Child Planner — Plans • Goals • Growth';
-        area.innerHTML = '<a class="button" href="mailto:BriaS@HomeSchoolFTS.com?subject=Planner%20download%20help">Contact Bria for download help</a>';
-        note.textContent = 'This edition is not yet enabled for automatic download. Do not merge this branch to the live site until its PDF asset is added.';
       } else {
         area.innerHTML = '<a class="button" href="/shop.html">Return to the planner shop</a>';
         note.textContent = 'We could not determine which planner edition was purchased.';
