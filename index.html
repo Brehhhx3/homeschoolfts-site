@@ -39,6 +39,7 @@
     .planner-badges{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
     .planner-badges span{padding:7px 11px;border:1px solid #d6bcbe;border-radius:999px;background:#fff;color:var(--ink);font-size:.78rem;font-weight:800}
     .planner-card p,.planner-panel>div>p{color:var(--muted)}
+    .planner-cover-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 20px}.mini-planner{aspect-ratio:8.5/11;background:#fff8ea;border:1px solid #dfd0c4;border-radius:10px;overflow:hidden;box-shadow:0 8px 18px rgba(32,32,32,.08);position:relative}.mini-planner-top{height:30%;background:#a9562c;border-bottom:3px solid #f3bf19;color:#fff;display:grid;place-items:center;text-align:center;font-weight:900;font-size:.54rem;line-height:1.1;padding:5px}.mini-planner-body{padding:10px;display:grid;place-items:center}.mini-planner-body img{width:72%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}.mini-planner.original .mini-planner-body{padding-top:24%;color:#a9562c;font-weight:900;font-size:.58rem;text-align:center}.mini-planner-label{display:block;text-align:center;font-size:.62rem;font-weight:800;margin-top:5px;color:var(--ink)}
     .future-panel{padding:28px;background:rgba(255,255,255,.45);border:1px dashed #d6bcbe;border-radius:18px;color:var(--muted)}
     @media(max-width:800px){.planner-panel{grid-template-columns:1fr}}
   </style>
@@ -170,11 +171,16 @@
               <div class="planner-badges"><span>Original</span><span>Two Child</span><span>Undated</span><span>10 pages</span></div>
             </div>
             <article class="planner-card">
+              <div class="planner-cover-strip" aria-label="Planner cover previews">
+                <div><div class="mini-planner original"><div class="mini-planner-top">WEEKLY HOMESCHOOL PLANNER</div><div class="mini-planner-body">HomeSchoolFTS<br>Learn Together</div></div><span class="mini-planner-label">Original</span></div>
+                <div><div class="mini-planner"><div class="mini-planner-top">TWO CHILD EDITION</div><div class="mini-planner-body"><img src="/assets/images/pin-homeschool-mom.webp" alt="Homeschool Mom planner cover art"></div></div><span class="mini-planner-label">Homeschool Mom</span></div>
+                <div><div class="mini-planner"><div class="mini-planner-top">TWO CHILD EDITION</div><div class="mini-planner-body"><img src="/assets/images/pin-goals-growth.webp" alt="Plans Goals Growth planner cover art"></div></div><span class="mini-planner-label">Plans • Goals • Growth</span></div>
+              </div>
               <p class="eyebrow">DIGITAL DOWNLOAD</p>
               <h3>HomeSchoolFTS Weekly Homeschool Planner</h3>
               <div class="planner-price">$2.00</div>
-              <p>Pick the planner version that fits your household, then check out securely through Stripe.</p>
-              <a class="button" href="/shop.html">Choose your planner</a>
+              <p>See each cover, pick the planner version that fits your household, then check out securely through Stripe.</p>
+              <a class="button" href="/shop.html">See covers & choose your planner</a>
             </article>
           </div>
         </div>
