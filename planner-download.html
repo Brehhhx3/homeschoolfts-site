@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Your Planner Download | HomeSchoolFTS</title>
+  <style>
+    .download-wrap{min-height:70vh;display:grid;place-items:center;padding:70px 0}.download-card{width:min(92%,720px);background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:var(--shadow);text-align:center}.download-card p{color:var(--muted)}.download-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}.notice{margin-top:22px;padding:16px;border-radius:14px;background:var(--surface-2);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container site-nav" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="HomeSchoolFTS home"><span class="brand-name">Homeschool <b>FTS</b></span><span class="brand-tagline">Freedom. Tools. Success.</span></a>
+      <div class="nav-list"><a href="/shop.html">Shop</a><a href="/">Home</a></div>
+    </nav>
+  </header>
+  <main class="download-wrap">
+    <section class="download-card" aria-labelledby="download-title">
+      <p class="eyebrow">PURCHASE COMPLETE</p>
+      <h1 id="download-title">Your planner is ready.</h1>
+      <p>Your payment will be verified securely before the PDF is delivered.</p>
+      <div id="download-area" class="download-actions"></div>
+      <p id="download-note" class="notice">Use the secure download button below. Your planner file is no longer served directly from the public website.</p>
+      <div class="download-actions"><a class="text-link" href="/shop.html">Back to the shop</a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div><strong>HOMESCHOOL FTS</strong><span>Freedom. Tools. Success.</span></div><small>© 2026 Homeschool FTS.</small></div></footer>
+  <script>
+    (() => {
+      const sessionId = new URLSearchParams(location.search).get('session_id');
+      const area = document.getElementById('download-area');
+      const note = document.getElementById('download-note');
+      const workerBase = 'https://homeschoolfts-downloads.brialee2424.workers.dev/';
+
+      if (!sessionId || !sessionId.startsWith('cs_')) {
+        area.innerHTML = '<a class="button" href="/shop.html">Return to the planner shop</a>';
+        note.textContent = 'We could not find a valid Stripe checkout session for this download.';
+        return;
+      }
+
+      const secureUrl = `${workerBase}?session_id=${encodeURIComponent(sessionId)}`;
+      const link = document.createElement('a');
+      link.className = 'button';
+      link.href = secureUrl;
+      link.textContent = 'Download your planner securely';
+      link.rel = 'nofollow';
+      area.appendChild(link);
+    })();
+  </script>
+</body>
+</html>

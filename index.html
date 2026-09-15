@@ -25,6 +25,23 @@
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
   <title>Homeschool FTS | Freedom. Tools. Success.</title>
+  <style>
+    .resource-inner{align-items:start}
+    .resource-tabs{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 0}
+    .resource-tab{padding:8px 13px;border:1px solid #d6bcbe;border-radius:999px;background:rgba(255,255,255,.6);color:var(--ink);font:800 .78rem/1.2 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}
+    .resource-tab[aria-selected="true"]{background:var(--burgundy);border-color:var(--burgundy);color:#fff}
+    .resource-panel{grid-column:1/-1;margin-top:30px}
+    .resource-panel[hidden]{display:none}
+    .planner-panel{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:30px;background:rgba(255,255,255,.58);border:1px solid #d6bcbe;border-radius:22px}
+    .planner-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 10px 35px rgba(32,32,32,.07)}
+    .planner-card h3{font-size:2rem;margin-bottom:8px}
+    .planner-price{font:700 1.5rem/1 Georgia,"Times New Roman",serif;color:var(--burgundy);margin:12px 0 18px}
+    .planner-badges{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+    .planner-badges span{padding:7px 11px;border:1px solid #d6bcbe;border-radius:999px;background:#fff;color:var(--ink);font-size:.78rem;font-weight:800}
+    .planner-card p,.planner-panel>div>p{color:var(--muted)}
+    .future-panel{padding:28px;background:rgba(255,255,255,.45);border:1px dashed #d6bcbe;border-radius:18px;color:var(--muted)}
+    @media(max-width:800px){.planner-panel{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -39,6 +56,7 @@
         <a href="#homeschool">Homeschool</a>
         <a href="#money">Money + Work</a>
         <a href="#smart">Smart Living</a>
+        <a href="/shop.html">Shop</a>
         <a href="#mom">Mom Life</a>
         <a href="#beaver-den">The Beaver Den</a>
         <a href="/about.html">Meet Bria</a>
@@ -130,13 +148,41 @@
           <p class="eyebrow">RESOURCES IN THE WORKS</p>
           <h2 id="resources-title">Useful stuff, not fluff.</h2>
           <p>Homeschool FTS is growing into a practical library of schedules, quarterly plans, printables, curriculum guidance, activities, and tools for different ages and stages.</p>
-          <div class="resource-tags" aria-label="Planned resource topics">
-            <span>Planning</span><span>Curriculum</span><span>Printables</span><span>High school</span><span>Elementary</span><span>Real-life learning</span>
+          <div class="resource-tabs" role="tablist" aria-label="Resource categories">
+            <button class="resource-tab" id="tab-planner" type="button" role="tab" aria-selected="true" aria-controls="panel-planner">Planner</button>
+            <button class="resource-tab" id="tab-curriculum" type="button" role="tab" aria-selected="false" aria-controls="panel-curriculum">Curriculum</button>
+            <button class="resource-tab" id="tab-printables" type="button" role="tab" aria-selected="false" aria-controls="panel-printables">Printables</button>
+            <button class="resource-tab" id="tab-highschool" type="button" role="tab" aria-selected="false" aria-controls="panel-highschool">High school</button>
+            <button class="resource-tab" id="tab-elementary" type="button" role="tab" aria-selected="false" aria-controls="panel-elementary">Elementary</button>
+            <button class="resource-tab" id="tab-reallife" type="button" role="tab" aria-selected="false" aria-controls="panel-reallife">Real-life learning</button>
           </div>
         </div>
         <figure class="resource-photo media-frame">
           <img src="/assets/images/pencils.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Colorful pencils arranged beside a clean white workspace">
         </figure>
+
+        <div class="resource-panel" id="panel-planner" role="tabpanel" aria-labelledby="tab-planner">
+          <div class="planner-panel">
+            <div>
+              <p class="eyebrow">PLANNER</p>
+              <h3>Weekly planners built for real homeschool life.</h3>
+              <p>Choose the original weekly planner or one of two two-child editions. Every version is undated, printable, and designed to keep the week visible without making planning another giant project.</p>
+              <div class="planner-badges"><span>Original</span><span>Two Child</span><span>Undated</span><span>10 pages</span></div>
+            </div>
+            <article class="planner-card">
+              <p class="eyebrow">DIGITAL DOWNLOAD</p>
+              <h3>HomeSchoolFTS Weekly Homeschool Planner</h3>
+              <div class="planner-price">$2.00</div>
+              <p>Pick the planner version that fits your household, then check out securely through Stripe.</p>
+              <a class="button" href="/shop.html">Choose your planner</a>
+            </article>
+          </div>
+        </div>
+        <div class="resource-panel future-panel" id="panel-curriculum" role="tabpanel" aria-labelledby="tab-curriculum" hidden>Curriculum resources are in the works.</div>
+        <div class="resource-panel future-panel" id="panel-printables" role="tabpanel" aria-labelledby="tab-printables" hidden>More printable resources are in the works.</div>
+        <div class="resource-panel future-panel" id="panel-highschool" role="tabpanel" aria-labelledby="tab-highschool" hidden>High school resources are in the works.</div>
+        <div class="resource-panel future-panel" id="panel-elementary" role="tabpanel" aria-labelledby="tab-elementary" hidden>Elementary resources are in the works.</div>
+        <div class="resource-panel future-panel" id="panel-reallife" role="tabpanel" aria-labelledby="tab-reallife" hidden>Real-life learning resources are in the works.</div>
       </div>
     </section>
 
@@ -204,6 +250,15 @@
 
   <script>
     (() => {
+      const tabs = [...document.querySelectorAll('.resource-tab')];
+      const panels = [...document.querySelectorAll('.resource-panel')];
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((item) => item.setAttribute('aria-selected', String(item === tab)));
+          panels.forEach((panel) => { panel.hidden = panel.id !== tab.getAttribute('aria-controls'); });
+        });
+      });
+
       const id = 'G-YSH75MQR8G';
       const key = 'homeschoolfts_analytics';
       const banner = document.getElementById('cookie-consent');
