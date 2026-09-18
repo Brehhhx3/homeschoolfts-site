@@ -1,0 +1,26 @@
+[
+  {
+    "id": "weekly-original",
+    "name": "Original Weekly Planner",
+    "description": "A flexible weekly layout for your household, with daily lesson planning, chores, reading, and reflection.",
+    "cover": "/assets/images/planners/weekly-original.png",
+    "price": "$2.00 USD",
+    "checkoutUrl": null
+  },
+  {
+    "id": "two-child-homeschool-mom",
+    "name": "Two Child Edition, Homeschool Mom cover",
+    "description": "Plan for two learners side by side, with separate goals, daily lessons, reading logs, and reflections. Includes the Homeschool Mom cover.",
+    "cover": "/assets/images/planners/two-child-homeschool-mom.png",
+    "price": "$2.00 USD",
+    "checkoutUrl": null
+  },
+  {
+    "id": "two-child-plans-goals-growth",
+    "name": "Two Child Edition, Plans • Goals • Growth cover",
+    "description": "The same two-learner planning pages, with the Plans • Goals • Growth cover. Choose the cover that feels like you.",
+    "cover": "/assets/images/planners/two-child-plans-goals-growth.png",
+    "price": "$2.00 USD",
+    "checkoutUrl": null
+  }
+]
