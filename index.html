@@ -24,338 +24,92 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
   <title>Homeschool FTS | Freedom. Tools. Success.</title>
-  <style>
-    .resource-inner{align-items:start}
-    .resource-tabs{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 0}
-    .resource-tab{padding:8px 13px;border:1px solid #d6bcbe;border-radius:999px;background:rgba(255,255,255,.6);color:var(--ink);font:800 .78rem/1.2 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}
-    .resource-tab[aria-selected="true"]{background:var(--burgundy);border-color:var(--burgundy);color:#fff}
-    .resource-panel{grid-column:1/-1;margin-top:30px}
-    .resource-panel[hidden]{display:none}
-    .planner-panel{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:30px;background:rgba(255,255,255,.58);border:1px solid #d6bcbe;border-radius:22px}
-    .planner-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 10px 35px rgba(32,32,32,.07)}
-    .planner-card h3{font-size:2rem;margin-bottom:8px}
-    .planner-price{font:700 1.5rem/1 Georgia,"Times New Roman",serif;color:var(--burgundy);margin:12px 0 18px}
-    .planner-badges{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-    .planner-badges span{padding:7px 11px;border:1px solid #d6bcbe;border-radius:999px;background:#fff;color:var(--ink);font-size:.78rem;font-weight:800}
-    .planner-card p,.planner-panel>div>p{color:var(--muted)}
-    .planner-cover-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 20px}.mini-planner{aspect-ratio:8.5/11;background:#fff8ea;border:1px solid #dfd0c4;border-radius:10px;overflow:hidden;box-shadow:0 8px 18px rgba(32,32,32,.08);position:relative}.mini-planner-top{height:30%;background:#a9562c;border-bottom:3px solid #f3bf19;color:#fff;display:grid;place-items:center;text-align:center;font-weight:900;font-size:.54rem;line-height:1.1;padding:5px}.mini-planner-body{padding:10px;display:grid;place-items:center}.mini-planner-body img{width:72%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}.mini-planner.original .mini-planner-body{padding-top:24%;color:#a9562c;font-weight:900;font-size:.58rem;text-align:center}.mini-planner-label{display:block;text-align:center;font-size:.62rem;font-weight:800;margin-top:5px;color:var(--ink)}
-    .future-panel{padding:28px;background:rgba(255,255,255,.45);border:1px dashed #d6bcbe;border-radius:18px;color:var(--muted)}
-    .home-blog{padding:92px 0}
-    .home-blog-head{max-width:780px}
-    .home-blog-head p:last-child{color:var(--muted);font-size:1.08rem}
-    .home-blog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
-    .home-blog-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 10px 35px rgba(32,32,32,.07)}
-    .home-blog-card h3{font-size:clamp(1.65rem,3vw,2.25rem);margin:8px 0 12px}
-    .home-blog-card p{color:var(--muted)}
-    .home-blog-card .post-meta{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--burgundy);margin-bottom:8px}
-    .home-blog-actions{margin-top:30px}
-    @media(max-width:800px){.planner-panel,.home-blog-grid{grid-template-columns:1fr}}
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="container site-nav" aria-label="Main navigation">
-      <a class="brand" href="/" aria-label="Homeschool FTS home">
-        <span class="brand-name">Homeschool <b>FTS</b></span>
-        <span class="brand-tagline">Freedom. Tools. Success.</span>
-      </a>
-      <div class="nav-list">
-        <a href="#homeschool">Homeschool</a>
-        <a href="#money">Money + Work</a>
-        <a href="#smart">Smart Living</a>
-        <a href="/blog/">Real Mom Blog</a>
-        <a href="/shop.html">Shop</a>
-        <a href="#mom">Mom Life</a>
-        <a href="#beaver-den">The Beaver Den</a>
-        <a href="/about.html">Meet Bria</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="content">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">FREEDOM · TOOLS · SUCCESS</p>
-        <h1 id="hero-title">Learning that grows <em>with your family.</em></h1>
-        <p class="lead">Practical homeschool resources, flexible planning, and real-life ideas for families who want an education built around the child instead of a one-size-fits-all system.</p>
-        <div class="hero-actions">
-          <a class="button" href="#resources">Explore resources</a>
-          <a class="text-link" href="/blog/">Read the Real Mom Blog</a>
-          <a class="text-link" href="/about.html">Meet Bria</a>
-        </div>
-      </div>
-      <figure class="hero-photo media-frame">
-        <img src="/assets/images/hero-family.webp" width="1400" height="1029" alt="A family learning together around a table at home" fetchpriority="high" decoding="async">
-      </figure>
-    </section>
-
-    <section id="approach" class="pillars container" aria-labelledby="pillars-title">
-      <div class="section-heading">
-        <p class="eyebrow">THE FTS APPROACH</p>
-        <h2 id="pillars-title">Freedom to choose. Tools to build. Success on your terms.</h2>
-        <p>Homeschooling can be structured without being rigid. FTS is about giving families room to adapt, practical resources they can actually use, and the confidence to define success for their own children.</p>
-      </div>
-
-      <div class="grid pillars-grid">
-        <article class="card pillar-card">
-          <span class="card-number">01</span>
-          <h3>Freedom</h3>
-          <p>Choose the pace, methods, subjects, schedule, and learning environment that fit your child and your household.</p>
-        </article>
-        <article class="card pillar-card">
-          <span class="card-number">02</span>
-          <h3>Tools</h3>
-          <p>Use practical planners, resources, curriculum guidance, technology, and strategies that make the day easier to manage.</p>
-        </article>
-        <article class="card pillar-card">
-          <span class="card-number">03</span>
-          <h3>Success</h3>
-          <p>Build knowledge, confidence, independence, critical thinking, and skills that carry into whatever comes next.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="story-band" aria-labelledby="real-life-title">
-      <div class="container story-intro">
-        <div>
-          <p class="eyebrow eyebrow-light">REAL-LIFE LEARNING</p>
-          <h2 id="real-life-title">Education happens everywhere.</h2>
-        </div>
-        <p>Reading together, trying something hands-on, talking through a problem, or following a question farther than the lesson planned: those moments count.</p>
-      </div>
-      <div class="container photo-grid">
-        <figure class="photo-tile photo-tile-tall">
-          <img src="/assets/images/learning-library.webp" width="932" height="760" loading="lazy" decoding="async" alt="An adult reading a book with a child in a library">
-        </figure>
-        <figure class="photo-tile">
-          <img src="/assets/images/learning-floor.webp" width="933" height="760" loading="lazy" decoding="async" alt="An adult and child doing a hands-on learning activity together">
-        </figure>
-        <figure class="photo-tile">
-          <img src="/assets/images/real-life-learning-at-home.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="A child reading on a couch while an adult reads nearby in a cozy home learning space">
-        </figure>
-      </div>
-    </section>
-
-    <section class="meet container" aria-labelledby="meet-title">
-      <figure class="meet-photo media-frame">
-        <img src="/assets/images/bria.webp" width="960" height="1200" loading="lazy" decoding="async" alt="Bria, founder of Homeschool FTS, seated in a warm home office">
-      </figure>
-      <div class="meet-copy">
-        <p class="script-accent" aria-hidden="true">hello</p>
-        <p class="eyebrow">MEET THE MOM BEHIND FTS</p>
-        <h2 id="meet-title">Meet Bria</h2>
-        <p class="intro-line">I’m the mom behind Homeschool FTS, and I’m building this space from the middle of real homeschool life, not from a perfect template.</p>
-        <p>I created Homeschool FTS to share the planning, resources, wins, lessons, and adjustments that actually help our family learn.</p>
-        <blockquote>“The freedom to create an education that fits your family. The tools to make it possible. And the confidence to define success for your child.”</blockquote>
-        <a class="button" href="/about.html">Read my story</a>
-      </div>
-    </section>
-
-    <section class="home-blog container" aria-labelledby="home-blog-title">
-      <div class="home-blog-head">
-        <p class="eyebrow">REAL MOM BLOG</p>
-        <h2 id="home-blog-title">The part of homeschooling nobody puts in the brochure.</h2>
-        <p>Real notes from the middle of homeschool life: the planning, the admin, the things that work, the things that flop, and the adjustments happening in between.</p>
-      </div>
-      <div class="home-blog-grid">
-        <article class="home-blog-card">
-          <p class="post-meta">September 19, 2026 · Planning</p>
-          <h3><a href="/blog/how-i-plan-our-homeschool-week.html">How I Plan Our Homeschool Week Without Planning Every Minute</a></h3>
-          <p>The weekly anchors, Sunday preview, and built-in flex day that give us structure without turning every day into a rigid schedule.</p>
-          <a class="text-link" href="/blog/how-i-plan-our-homeschool-week.html">Read the post →</a>
-        </article>
-        <article class="home-blog-card">
-          <p class="post-meta">September 17, 2026 · Mom Life</p>
-          <h3><a href="/blog/what-i-actually-write-in-my-homeschool-planner.html">What I Actually Write in My Homeschool Planner</a></h3>
-          <p>A real look inside the planner of a working homeschool parent, including what actually gets written down, what gets skipped, and why.</p>
-          <a class="text-link" href="/blog/what-i-actually-write-in-my-homeschool-planner.html">Read the post →</a>
-        </article>
-        <article class="home-blog-card">
-          <p class="post-meta">September 17, 2026 · Mom Life</p>
-          <h3><a href="/blog/the-350-am-emails-count.html">The 3:50 AM Emails Count</a></h3>
-          <p>Admissions portals, tutoring accounts, backup plans, a working planner store, and the invisible admin that keeps homeschool life moving.</p>
-          <a class="text-link" href="/blog/the-350-am-emails-count.html">Read the post →</a>
-        </article>
-      </div>
-      <div class="home-blog-actions">
-        <a class="button" href="/blog/">Visit the Real Mom Blog</a>
-      </div>
-    </section>
-
-    <section id="resources" class="resource-feature" aria-labelledby="resources-title">
-      <div class="container resource-inner">
-        <div class="resource-copy">
-          <p class="eyebrow">RESOURCES IN THE WORKS</p>
-          <h2 id="resources-title">Useful stuff, not fluff.</h2>
-          <p>Homeschool FTS is growing into a practical library of schedules, quarterly plans, printables, curriculum guidance, activities, and tools for different ages and stages.</p>
-          <div class="resource-tabs" role="tablist" aria-label="Resource categories">
-            <button class="resource-tab" id="tab-planner" type="button" role="tab" aria-selected="true" aria-controls="panel-planner">Planner</button>
-            <button class="resource-tab" id="tab-curriculum" type="button" role="tab" aria-selected="false" aria-controls="panel-curriculum">Curriculum</button>
-            <button class="resource-tab" id="tab-printables" type="button" role="tab" aria-selected="false" aria-controls="panel-printables">Printables</button>
-            <button class="resource-tab" id="tab-highschool" type="button" role="tab" aria-selected="false" aria-controls="panel-highschool">High school</button>
-            <button class="resource-tab" id="tab-elementary" type="button" role="tab" aria-selected="false" aria-controls="panel-elementary">Elementary</button>
-            <button class="resource-tab" id="tab-reallife" type="button" role="tab" aria-selected="false" aria-controls="panel-reallife">Real-life learning</button>
-          </div>
-        </div>
-        <figure class="resource-photo media-frame">
-          <img src="/assets/images/pencils.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Colorful pencils arranged beside a clean white workspace">
-        </figure>
-
-        <div class="resource-panel" id="panel-planner" role="tabpanel" aria-labelledby="tab-planner">
-          <div class="planner-panel">
-            <div>
-              <p class="eyebrow">PLANNER</p>
-              <h3>Weekly planners built for real homeschool life.</h3>
-              <p>Choose the original weekly planner or one of two two-child editions. Every version is undated, printable, and designed to keep the week visible without making planning another giant project.</p>
-              <div class="planner-badges"><span>Original</span><span>Two Child</span><span>Undated</span><span>10 pages</span></div>
-            </div>
-            <article class="planner-card">
-              <div class="planner-cover-strip" aria-label="Planner cover previews">
-                <div><div class="mini-planner original"><div class="mini-planner-top">WEEKLY HOMESCHOOL PLANNER</div><div class="mini-planner-body">HomeSchoolFTS<br>Learn Together</div></div><span class="mini-planner-label">Original</span></div>
-                <div><div class="mini-planner"><div class="mini-planner-top">TWO CHILD EDITION</div><div class="mini-planner-body"><img src="/assets/images/pin-homeschool-mom.webp" alt="Homeschool Mom planner cover art"></div></div><span class="mini-planner-label">Homeschool Mom</span></div>
-                <div><div class="mini-planner"><div class="mini-planner-top">TWO CHILD EDITION</div><div class="mini-planner-body"><img src="/assets/images/pin-goals-growth.webp" alt="Plans Goals Growth planner cover art"></div></div><span class="mini-planner-label">Plans • Goals • Growth</span></div>
-              </div>
-              <p class="eyebrow">DIGITAL DOWNLOAD</p>
-              <h3>HomeSchoolFTS Weekly Homeschool Planner</h3>
-              <div class="planner-price">$2.00</div>
-              <p>See each cover, pick the planner version that fits your household, then check out securely through Stripe.</p>
-              <a class="button" href="/shop.html">See covers & choose your planner</a>
-            </article>
-          </div>
-        </div>
-        <div class="resource-panel" id="panel-curriculum" role="tabpanel" aria-labelledby="tab-curriculum" hidden>
-          <div class="planner-panel">
-            <div>
-              <p class="eyebrow">CURRICULUM · GRADE 3 GEOGRAPHY</p>
-              <h3>Explore the world one section at a time.</h3>
-              <p>This complete 12-page curriculum pack is built for curious explorers ages 8–9. It covers continents and oceans, continent deep dives, Antarctica, landforms and bodies of water, geography vocabulary, compass directions, map keys, map scale, and a final review quiz with an answer key.</p>
-              <div class="planner-badges"><span>Grade 3</span><span>Ages 8–9</span><span>12 pages</span><span>Printable PDF</span><span>Answer key</span></div>
-            </div>
-            <article class="planner-card">
-              <div class="planner-cover-strip" aria-label="Grade 3 Geography curriculum preview">
-                <div><div class="mini-planner original"><div class="mini-planner-top">GRADE 3 GEOGRAPHY</div><div class="mini-planner-body">Complete Curriculum Pack<br><br>Ages 8–9</div></div><span class="mini-planner-label">Digital curriculum</span></div>
-              </div>
-              <p class="eyebrow">DIGITAL CURRICULUM DOWNLOAD</p>
-              <h3>Grade 3 Geography Complete Curriculum Pack</h3>
-              <div class="planner-price">$10.00</div>
-              <p>Continents, oceans, landmarks, landforms, map skills, vocabulary, practice activities, a 30-question final review, and a parent answer key in one printable pack.</p>
-              <a class="button" href="https://buy.stripe.com/5kQ9AT3Xucql2aDeiSaIM05">Buy Grade 3 Geography for $10</a>
-            </article>
-          </div>
-        </div>
-        <div class="resource-panel" id="panel-printables" role="tabpanel" aria-labelledby="tab-printables" hidden>
-          <article class="planner-card">
-            <p class="eyebrow">PRINTABLES · FREE PREVIEW</p>
-            <h3>Grade 3 Geography Mini Pack</h3>
-            <p>Try a free 3-page preview with a continents and oceans reference, a continent-labeling activity, and a true-or-false geography quiz.</p>
-            <div class="planner-badges"><span>Grade 3</span><span>3 pages</span><span>Free PDF</span><span>Geography</span></div>
-            <a class="button" href="/assets/downloads/grade-3-geography-mini-pack-preview.pdf" download>Download the free mini pack</a>
-          </article>
-        </div>
-        <div class="resource-panel" id="panel-highschool" role="tabpanel" aria-labelledby="tab-highschool" hidden>
-          <article class="planner-card">
-            <p class="eyebrow">HIGH SCHOOL · FREE PRINTABLE</p>
-            <h3>High School Credit Tracker</h3>
-            <p>Keep yearly credit totals for grades 9–12, your graduation goal, and notes together in one printable tracker.</p>
-            <div class="planner-badges"><span>Grades 9–12</span><span>2-page PDF</span><span>Free download</span></div>
-            <a class="button" href="/assets/downloads/high-school-credit-tracker.pdf" download>Download the credit tracker (PDF)</a>
-          </article>
-        </div>
-        <div class="resource-panel future-panel" id="panel-elementary" role="tabpanel" aria-labelledby="tab-elementary" hidden>Elementary resources are in the works.</div>
-        <div class="resource-panel" id="panel-reallife" role="tabpanel" aria-labelledby="tab-reallife" hidden>
-          <div class="planner-panel">
-            <div>
-              <p class="eyebrow">REAL-LIFE LEARNING · FREE PRINTABLE</p>
-              <h3>Free One-Page Weekly Planning Sheet</h3>
-              <p>Plan the week without planning every minute. This simple printable keeps your main goal, schedule, subjects, books, activities, prep, and end-of-week reflection together on one easy sheet.</p>
-              <div class="planner-badges"><span>Free PDF</span><span>Weekly planning</span><span>Flexible homeschool</span><span>Print at home</span></div>
-              <a class="text-link" href="/blog/how-i-plan-our-homeschool-week.html">Read how I use this sheet →</a>
-            </div>
-            <article class="planner-card">
-              <p class="eyebrow">DOWNLOAD + READ</p>
-              <h3>A simple plan that leaves room for real life.</h3>
-              <p>The free sheet works with the weekly anchor approach from “How I Plan Our Homeschool Week Without Planning Every Minute.” Read the post for the full routine, or download the printable and start planning.</p>
-              <a class="button" href="/assets/downloads/free-one-page-weekly-planning-sheet.pdf" download>Download the free planning sheet</a>
-              <p><a class="text-link" href="/blog/how-i-plan-our-homeschool-week.html">Read the matching blog post →</a></p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact container">
-      <p class="eyebrow">STAY CONNECTED</p>
-      <h2>We’re building Homeschool FTS in real time.</h2>
-      <p>Have a question, an idea, or a resource you’d love to see here? <a href="mailto:BriaS@HomeSchoolFTS.com">Email Bria</a>.</p>
-    </section>
-
-    <section id="homeschool" class="section container">
-      <p class="eyebrow">HOMESCHOOL</p>
-      <h2>Coming soon.</h2>
-    </section>
-
-    <section id="money" class="home-blog container" aria-labelledby="money-title">
-      <div class="home-blog-head">
-        <p class="eyebrow">MONEY + WORK</p>
-        <h2 id="money-title">Real work, uneven paychecks, and the systems that keep us steady.</h2>
-        <p>Honest notes about flexible work, building income around family life, and managing money when it does not arrive on a perfectly predictable schedule.</p>
-      </div>
-      <div class="home-blog-grid">
-        <article class="home-blog-card">
-          <p class="post-meta">September 19, 2026 · Money + Work</p>
-          <h3><a href="/money-work/the-honest-reality-of-irregular-income.html">The Honest Reality of Irregular Income (And How We Manage It)</a></h3>
-          <p>What irregular income actually feels like, how we budget through the uneven months, and why “steady-ish” still counts.</p>
-          <a class="text-link" href="/money-work/the-honest-reality-of-irregular-income.html">Read the post →</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="smart" class="section container" aria-labelledby="smart-title">
-      <div class="home-blog-head">
-        <p class="eyebrow">SMART LIVING</p>
-        <h2 id="smart-title">Simple tools for making real life easier.</h2>
-        <p>Practical apps, shortcuts, organization ideas, and everyday tools that can save time, money, or a little mental energy.</p>
-      </div>
-      <div class="home-blog-grid">
-        <article class="home-blog-card">
-          <p class="post-meta">September 19, 2026 · Smart Living</p>
-          <h3><a href="/smart-living/digital-planning-setup-household.html">The Digital Planning Setup That Changed How I Run Our Household</a></h3>
-          <p>How I split calendars, tasks, projects, and notes into a simple system so homeschool, family life, school, and business do not all live in my head.</p>
-          <a class="text-link" href="/smart-living/digital-planning-setup-household.html">Read the post →</a>
-        </article>
-        <article class="home-blog-card">
-          <p class="post-meta">September 19, 2026 · Smart Living</p>
-          <h3><a href="/smart-living/5-free-apps-homeschool-parents-organized.html">5 Free Apps That Actually Help You Stay Organized as a Homeschool Parent</a></h3>
-          <p>Five genuinely useful free tools for managing homeschool schedules, family life, tasks, resources, and the endless list living in your head.</p>
-          <a class="text-link" href="/smart-living/5-free-apps-homeschool-parents-organized.html">Read the post →</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="mom" class="section container">
-      <p class="eyebrow">MOM LIFE</p>
-      <h2>Coming soon.</h2>
-    </section>
-
-    <section id="beaver-den" class="section container">
-      <p class="eyebrow">THE BEAVER DEN</p>
-      <h2>Coming soon.</h2>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>HOMESCHOOL FTS</strong>
-        <span>Freedom. Tools. Success.</span>
-      </div>
-      <small>© 2026 Homeschool FTS. All rights reserved.</small>
+<header class="site-header">
+  <nav class="container site-nav" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label="HomeSchool FTS home"><span class="brand-name">HomeSchool <b>FTS</b></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="home-nav">Menu</button>
+    <div class="nav-list" id="home-nav">
+      <a href="#planner">Planner</a><a href="#curriculum">Curriculum</a><a href="#printables">Printables</a>
+      <a href="#high-school">High School</a><a href="#elementary">Elementary</a><a href="#middle-school">Middle School</a>
+      <a class="nav-shop" href="#shop">Shop Resources</a>
     </div>
-  </footer>
-
+  </nav>
+</header>
+<main id="content">
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Freedom &nbsp;·&nbsp; Tools &nbsp;·&nbsp; Success</p>
+      <h1 id="hero-title">Real homeschool.<br><em>Honest</em> resources.</h1>
+      <p class="lead">Built from day-to-day homeschool life. Planners, printables, curriculum notes, and practical ideas for families figuring out what actually works.</p>
+      <div class="hero-actions"><a class="button" href="#categories">Browse Resources</a><a class="button button-outline" href="#about">How It Works</a></div>
+    </div>
+    <div class="hero-art" aria-label="A look at learning together at home">
+      <img class="hero-art-back" src="/assets/images/hero-family.webp" alt="A family learning together around a table" width="1400" height="1029" fetchpriority="high">
+      <img class="hero-art-front" src="/assets/images/learning-reading.webp" alt="A child reading at home" width="933" height="760">
+      <div class="hero-art-note"><span>Real family</span><strong>Real-life learning</strong></div>
+    </div>
+  </section>
+  <section class="pillars container" aria-label="The FTS approach">
+    <div class="pillars-grid">
+      <article class="pillar-card"><span class="pillar-letter">F</span><h2>Freedom</h2><p>Your pace. Your methods. Your schedule.</p></article>
+      <article class="pillar-card"><span class="pillar-letter">T</span><h2>Tools</h2><p>Practical resources from real experience.</p></article>
+      <article class="pillar-card"><span class="pillar-letter">S</span><h2>Success</h2><p>Defined by your child, not a standard.</p></article>
+    </div>
+  </section>
+  <section id="categories" class="categories-band" aria-labelledby="categories-title">
+    <div class="container">
+      <p class="eyebrow">Resource Categories</p><div class="section-intro"><h2 id="categories-title">Everything <em>in one place</em></h2><p>Find the resources that fit the season your family is in.</p></div>
+      <div class="category-grid">
+        <a class="category-card" id="planner" href="#shop"><span class="category-top"><span>01</span><span>Organization</span></span><h3>Planner</h3><p>Flexible weekly tools that leave room for the days that change.</p><span class="explore">Explore ↗</span></a>
+        <a class="category-card" id="curriculum" href="#curriculum-feature"><span class="category-top"><span>02</span><span>Resources</span></span><h3>Curriculum</h3><p>Printable learning packs and honest notes on finding what fits.</p><span class="explore">Explore ↗</span></a>
+        <a class="category-card" id="printables" href="#free"><span class="category-top"><span>03</span><span>Downloads</span></span><h3>Printables</h3><p>Free pages for planning, geography, and tracking progress.</p><span class="explore">Explore ↗</span></a>
+        <a class="category-card" id="high-school" href="#free"><span class="category-top"><span>04</span><span>Planning</span></span><h3>High School</h3><p>Keep credits, goals, and the next steps visible.</p><span class="explore">Explore ↗</span></a>
+        <a class="category-card" href="#elementary"><span class="category-top"><span>05</span><span>Early Years</span></span><h3>Elementary</h3><p>Short lessons, hands-on activities, and curiosity-led learning.</p><span class="explore">Explore ↗</span></a>
+        <a class="category-card" href="#middle-school"><span class="category-top"><span>06</span><span>Grades 6–8</span></span><h3>Middle School</h3><p>Room to build independence and find a rhythm that works.</p><span class="explore">Explore ↗</span></a>
+        <a class="category-card" href="#real-life"><span class="category-top"><span>07</span><span>Everyday</span></span><h3>Real-Life Learning</h3><p>Cooking, errands, conversations, and learning outside the workbook.</p><span class="explore">Explore ↗</span></a>
+      </div>
+    </div>
+  </section>
+  <section id="elementary" class="stage-section container" aria-labelledby="elementary-title">
+    <div class="stage-image"><img src="/assets/images/learning-floor.webp" alt="An adult and child doing a hands-on activity together" width="933" height="760" loading="lazy"></div>
+    <div class="stage-copy"><p class="eyebrow">Grade K–5</p><h2 id="elementary-title">Elementary</h2><p>Short lessons. Big curiosity. Room to follow a topic longer than the schedule said to.</p>
+      <div class="stage-list"><a href="/assets/downloads/grade-3-geography-mini-pack-preview.pdf">Grade 3 Geography Mini Pack <span>Free PDF ↗</span></a><a href="#curriculum-feature">Grade 3 Geography Full Pack <span>Explore ↗</span></a><a href="/blog/how-i-plan-our-homeschool-week.html">Planning a flexible homeschool week <span>Read ↗</span></a></div>
+    </div>
+  </section>
+  <section id="middle-school" class="stage-section stage-reverse container" aria-labelledby="middle-title">
+    <div class="stage-copy"><p class="eyebrow">Grade 6–8</p><h2 id="middle-title">Middle School</h2><p>The in-between years bring new questions about study habits, independence, and what comes next. Start with a simple plan and adjust it as you go.</p>
+      <div class="stage-list"><a href="/assets/downloads/free-one-page-weekly-planning-sheet.pdf">Weekly Planning Sheet <span>Free PDF ↗</span></a><a href="/assets/downloads/high-school-credit-tracker.pdf">High School Credit Tracker <span>Free PDF ↗</span></a></div>
+    </div>
+    <div class="stage-image"><img src="/assets/images/learning-library.webp" alt="An adult reading with a child in a library" width="932" height="760" loading="lazy"></div>
+  </section>
+  <section id="about" class="about-band" aria-labelledby="about-title"><div class="container about-layout">
+    <div class="about-copy"><p class="eyebrow">The Story Behind FTS</p><h2 id="about-title">Built from the days that <em>didn't go to plan</em></h2><p>I'm Bria, the mom behind HomeSchoolFTS. I share the planning, resources, wins, and adjustments that help my family learn. This space is growing right alongside us.</p><p>Freedom, Tools, Success means choosing what fits your child, having practical tools to make it happen, and defining success on your own terms.</p><a class="button button-outline" href="/about.html">Meet Bria</a></div>
+    <div class="about-visual"><img src="/assets/images/bria.webp" alt="Bria in her home office" width="960" height="1200" loading="lazy"><div class="quote-card"><span>Content promise</span><strong>Useful stuff.<br>Not fluff.</strong></div></div>
+  </div></section>
+  <section id="shop" class="shop-section container" aria-labelledby="shop-title"><div class="section-intro"><div><p class="eyebrow">Shop</p><h2 id="shop-title">Featured <em>Resources</em></h2></div><p>Start with a planner, or try the geography pack. All paid downloads use the existing secure checkout.</p></div>
+    <div class="shop-grid">
+      <article class="shop-card"><div class="shop-media"><img src="/assets/images/pin-homeschool-mom.webp" alt="Homeschool Mom planner cover" loading="lazy"></div><div class="shop-details"><span class="shop-kicker">Printable PDF · Two child</span><h3>Weekly Planner · Homeschool Mom</h3><p>Daily pages for two children, plus an overview, reading log, goals, and reflection.</p><div class="shop-bottom"><strong>$2</strong><a class="button" href="/shop.html">Choose planner</a></div></div></article>
+      <article class="shop-card"><div class="shop-media"><img src="/assets/images/pin-goals-growth.webp" alt="Plans Goals Growth planner cover" loading="lazy"></div><div class="shop-details"><span class="shop-kicker">Printable PDF · Two child</span><h3>Weekly Planner · Plans, Goals, Growth</h3><p>The two-child edition with a different cover and the same practical weekly pages.</p><div class="shop-bottom"><strong>$2</strong><a class="button" href="/shop.html">Choose planner</a></div></div></article>
+      <article class="shop-card" id="curriculum-feature"><div class="shop-media shop-media-geography"><span>GRADE 3<br>GEOGRAPHY</span><small>Complete Curriculum Pack</small></div><div class="shop-details"><span class="shop-kicker">Printable PDF · Grade 3</span><h3>Geography Curriculum Pack</h3><p>Continents, oceans, map skills, practice activities, and an answer key in one pack.</p><div class="shop-bottom"><strong>$10</strong><a class="button" href="https://buy.stripe.com/5kQ9AT3Xucql2aDeiSaIM05">Get the pack</a></div></div></article>
+    </div><p class="section-end"><a href="/shop.html">View all planner editions ↗</a></p>
+  </section>
+  <section id="free" class="free-band" aria-labelledby="free-title"><div class="container"><p class="eyebrow">Free Stuff</p><div class="section-intro"><h2 id="free-title">Actually useful.<br><em>Actually free.</em></h2><p>Try a resource today. These downloads don't require a purchase.</p></div>
+    <div class="free-grid"><a href="/assets/downloads/free-one-page-weekly-planning-sheet.pdf" download><span>Planning · PDF</span><h3>One-Page Weekly Planning Sheet</h3><p>Goals, schedule, subjects, prep, and reflection on one easy page.</p><strong>Download free ↗</strong></a><a href="/assets/downloads/grade-3-geography-mini-pack-preview.pdf" download><span>Geography · PDF</span><h3>Grade 3 Geography Mini Pack</h3><p>A three-page preview with continents, oceans, and a quick quiz.</p><strong>Download free ↗</strong></a><a href="/assets/downloads/high-school-credit-tracker.pdf" download><span>High School · PDF</span><h3>High School Credit Tracker</h3><p>Track credits and notes across grades 9 through 12.</p><strong>Download free ↗</strong></a></div>
+  </div></section>
+  <section id="real-life" class="blog-section container" aria-labelledby="blog-title"><p class="eyebrow">From the Blog</p><div class="section-intro"><h2 id="blog-title">What's actually <em>working</em></h2><p>Real notes from the middle of homeschool life. The plans, changes, and everyday stuff that count.</p></div>
+    <div class="blog-feature"><img src="/assets/images/post-homeschool-life.webp" alt="Homeschool planning at home" loading="lazy"><div><span class="shop-kicker">Planner · Planning</span><h3>What I Actually Write in My Homeschool Planner</h3><p>A real look inside the planner of a working homeschool parent, including what gets written down, what gets skipped, and why.</p><a class="button button-outline" href="/blog/what-i-actually-write-in-my-homeschool-planner.html">Read the post</a></div></div>
+    <div class="blog-links"><a href="/blog/how-i-plan-our-homeschool-week.html">How I Plan Our Homeschool Week <span>Read ↗</span></a><a href="/blog/the-350-am-emails-count.html">The 3:50 AM Emails Count <span>Read ↗</span></a><a href="/money-work/the-honest-reality-of-irregular-income.html">The Honest Reality of Irregular Income <span>Read ↗</span></a></div>
+    <p class="section-end"><a href="/blog/">Visit the Real Mom Blog ↗</a></p>
+  </section>
+  <section class="contact-band" id="contact"><div class="container"><p class="eyebrow">Stay Connected</p><h2>New resources, honest notes, no noise.</h2><p>Have an idea or a question? I'd love to hear what would help your family.</p><a class="button" href="mailto:BriaS@HomeSchoolFTS.com">Email Bria</a></div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div><strong>HomeSchool FTS</strong><span>Freedom · Tools · Success</span><p>Practical resources from real homeschool life.</p></div><nav aria-label="Footer navigation"><a href="#categories">Resources</a><a href="/shop.html">Shop</a><a href="/blog/">Blog</a><a href="/about.html">About</a><a href="mailto:BriaS@HomeSchoolFTS.com">Contact</a></nav><small>© 2026 HomeSchoolFTS</small></div></footer>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -378,13 +132,18 @@
 
   <script>
     (() => {
-      const tabs = [...document.querySelectorAll('.resource-tab')];
-      const panels = [...document.querySelectorAll('.resource-panel')];
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          tabs.forEach((item) => item.setAttribute('aria-selected', String(item === tab)));
-          panels.forEach((panel) => { panel.hidden = panel.id !== tab.getAttribute('aria-controls'); });
-        });
+      const menu = document.querySelector('.menu-toggle');
+      const nav = document.getElementById('home-nav');
+      menu.addEventListener('click', () => {
+        const open = menu.getAttribute('aria-expanded') !== 'true';
+        menu.setAttribute('aria-expanded', String(open));
+        nav.classList.toggle('is-open', open);
+      });
+      nav.addEventListener('click', (event) => {
+        if (event.target.closest('a')) {
+          menu.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('is-open');
+        }
       });
 
       const id = 'G-YSH75MQR8G';
