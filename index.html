@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/home.css">
   <title>Homeschool FTS | Freedom. Tools. Success.</title>
-</head>
+  <script defer src="/assets/js/analytics.js"></script>\n</head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
@@ -138,7 +138,7 @@
 
   <div id="cookie-consent" class="cookie-consent" aria-live="polite" hidden>
     <div class="cookie-inner container">
-      <p>We use minimal analytics to understand how the site is used. Analytics only load after you accept.</p>
+      <p>We use minimal analytics to understand how the site is used. Analytics storage stays off unless you accept.</p>
       <div class="cookie-actions">
         <button id="cookie-reject" class="button button-secondary" type="button">Reject</button>
         <button id="cookie-accept" class="button" type="button">Accept</button>
@@ -160,34 +160,6 @@
           menu.setAttribute('aria-expanded', 'false');
           nav.classList.remove('is-open');
         }
-      });
-
-      const id = 'G-YSH75MQR8G';
-      const key = 'homeschoolfts_analytics';
-      const banner = document.getElementById('cookie-consent');
-      const loadAnalytics = () => {
-        if (window.gtagLoaded) return;
-        const script = document.createElement('script');
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-        script.async = true;
-        document.head.appendChild(script);
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = (...args) => window.dataLayer.push(args);
-        window.gtag('js', new Date());
-        window.gtag('config', id, { anonymize_ip: true });
-        window.gtagLoaded = true;
-      };
-      const consent = localStorage.getItem(key);
-      if (consent === 'granted') loadAnalytics();
-      else if (consent !== 'denied') banner.hidden = false;
-      document.getElementById('cookie-accept').addEventListener('click', () => {
-        localStorage.setItem(key, 'granted');
-        loadAnalytics();
-        banner.hidden = true;
-      });
-      document.getElementById('cookie-reject').addEventListener('click', () => {
-        localStorage.setItem(key, 'denied');
-        banner.hidden = true;
       });
     })();
   </script>
