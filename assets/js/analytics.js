@@ -7,14 +7,23 @@
     window.dataLayer.push(arguments);
   };
 
-  // Load the Google tag on every page so Tag Assistant can detect it.
-  // Analytics storage remains denied until the visitor accepts.
+  // Default to no analytics storage until consent is known.
   window.gtag('consent', 'default', {
     analytics_storage: 'denied',
     ad_storage: 'denied',
     ad_user_data: 'denied',
     ad_personalization: 'denied'
   });
+
+  const savedConsent = localStorage.getItem(consentKey);
+
+  // Apply persisted consent BEFORE config so returning accepted visitors
+  // do not send their automatic page view under denied consent.
+  if (savedConsent === 'granted') {
+    window.gtag('consent', 'update', {
+      analytics_storage: 'granted'
+    });
+  }
 
   const tag = document.createElement('script');
   tag.async = true;
@@ -24,7 +33,7 @@
   window.gtag('js', new Date());
   window.gtag('config', measurementId, {
     anonymize_ip: true,
-    send_page_view: true
+    send_page_view: savedConsent === 'granted'
   });
 
   function updateConsent(value) {
@@ -33,9 +42,12 @@
     });
   }
 
-  const savedConsent = localStorage.getItem(consentKey);
-  if (savedConsent === 'granted') {
-    updateConsent('granted');
+  function sendCurrentPageView() {
+    window.gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname + window.location.search
+    });
   }
 
   function bindBanner() {
@@ -72,6 +84,7 @@
       accept.addEventListener('click', () => {
         localStorage.setItem(consentKey, 'granted');
         updateConsent('granted');
+        sendCurrentPageView();
         banner.hidden = true;
       });
     }
